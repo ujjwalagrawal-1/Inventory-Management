@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { AppProvider, useApp } from "./context/AppContext";
 import { InventoryProvider } from "./context/InventoryContext";
 import { SupplierProvider } from "./context/SupplierContext";
+import { OrderProvider } from "./context/OrderContext";
 import MainLayout from "./components/layout/MainLayout";
+
 
 // Import Pages
 import DashboardPage from "./pages/Dashboard/DashboardPage";
@@ -80,7 +82,9 @@ export default function App() {
     <AppProvider>
       <InventoryProvider>
         <SupplierProvider>
-          <AppContent />
+          <OrderProvider>
+            <AppContent />
+          </OrderProvider>
         </SupplierProvider>
       </InventoryProvider>
     </AppProvider>
