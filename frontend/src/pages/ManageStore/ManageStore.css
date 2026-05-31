@@ -1,0 +1,143 @@
+.manage-store-card {
+  min-height: calc(100vh - var(--header-height) - 48px);
+  padding: 24px;
+}
+
+.manage-store-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.manage-store-title {
+  margin: 0;
+  color: #2f3747;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.add-store-btn {
+  min-width: 112px;
+  height: 42px;
+  border-radius: 4px;
+  background-color: #1366d9;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.add-store-btn:hover:not(:disabled) {
+  background-color: #0f58bd;
+}
+
+.store-list {
+  width: min(100%, 1030px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+}
+
+.store-row {
+  display: grid;
+  grid-template-columns: minmax(220px, 320px) 1fr;
+  min-height: 156px;
+  overflow: hidden;
+  border: 1px solid #eef1f5;
+  border-radius: 6px;
+  background-color: #ffffff;
+}
+
+.store-branch-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background-color: #f0f1f3;
+  color: #3a4250;
+  text-align: center;
+}
+
+.store-branch-panel h3,
+.store-copy h3 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.store-details-panel {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 20px 20px 18px 24px;
+}
+
+.store-copy {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: center;
+  gap: 13px;
+  color: #8b95a7;
+}
+
+.store-copy h3 {
+  color: #596274;
+}
+
+.store-copy p {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.edit-store-btn {
+  align-self: flex-start;
+  min-width: 96px;
+  height: 42px;
+  border-radius: 5px;
+  border-color: #e3eaf4;
+  color: #1366d9;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.edit-store-btn:hover:not(:disabled) {
+  border-color: #c9d8ed;
+  color: #0f58bd;
+  background-color: #f8fbff;
+}
+
+@media (max-width: 900px) {
+  .store-list {
+    gap: 24px;
+  }
+
+  .store-row {
+    grid-template-columns: 1fr;
+  }
+
+  .store-branch-panel {
+    min-height: 86px;
+  }
+}
+
+@media (max-width: 640px) {
+  .manage-store-card {
+    padding: 18px;
+  }
+
+  .manage-store-header,
+  .store-details-panel {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .add-store-btn,
+  .edit-store-btn {
+    width: 100%;
+  }
+}
