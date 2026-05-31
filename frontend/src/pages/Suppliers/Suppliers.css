@@ -1,0 +1,34 @@
+/* Suppliers.css */
+
+.suppliers-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.suppliers-card-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.suppliers-header-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* Supplier Status Badge colors */
+.badge-taking-return {
+  background-color: #e6f7ed;
+  color: #2e7d32;
+}
+
+.badge-not-taking-return {
+  background-color: #fff1f0;
+  color: #f5222d;
+}

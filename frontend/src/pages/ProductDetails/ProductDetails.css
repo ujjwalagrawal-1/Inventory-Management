@@ -1,0 +1,187 @@
+/* ProductDetails.css */
+
+.product-details-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Details Page Header styling */
+.details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.details-title-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.details-product-name {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.details-product-category {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.details-header-actions {
+  display: flex;
+  gap: 12px;
+}
+
+/* Tab Bar Styling */
+.details-tabs {
+  display: flex;
+  gap: 32px;
+  border-bottom: 2px solid var(--border-color);
+  margin-bottom: 8px;
+}
+
+.details-tab-btn {
+  background: none;
+  border: none;
+  padding: 10px 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  position: relative;
+  transition: color var(--transition-fast);
+}
+
+.details-tab-btn:hover {
+  color: var(--primary-color);
+}
+
+.details-tab-btn.active {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.details-tab-btn.active::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+}
+
+/* Overview Tab Grid Layout */
+.overview-grid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 32px;
+  padding: 10px 0;
+}
+
+@media (max-width: 992px) {
+  .overview-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Details List styling */
+.details-section-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-top: 0;
+  margin-bottom: 16px;
+  border-left: 3px solid var(--primary-color);
+  padding-left: 8px;
+}
+
+.details-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.details-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  border-bottom: 1px dashed var(--border-color);
+  padding-bottom: 8px;
+}
+
+.details-label {
+  color: var(--text-secondary);
+  font-weight: 500;
+  width: 150px;
+}
+
+.details-value {
+  color: var(--text-primary);
+  font-weight: 600;
+  flex: 1;
+  text-align: left;
+}
+
+/* Stock Locations Section */
+.stock-locations-card {
+  margin-top: 20px;
+}
+
+/* Right Side Highlights */
+.highlights-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.product-image-box {
+  width: 100%;
+  aspect-ratio: 1.3;
+  background-color: var(--bg-app);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.product-image-fallback {
+  font-size: 64px;
+  color: var(--text-muted);
+}
+
+.maggi-image-temp {
+  width: 70%;
+  height: auto;
+  object-fit: contain;
+}
+
+.metrics-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.metric-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+}
+
+.metric-label {
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.metric-value {
+  font-weight: 700;
+  color: var(--text-primary);
+}

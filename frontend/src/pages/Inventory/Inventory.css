@@ -1,0 +1,134 @@
+/* Inventory.css */
+
+/* Overall Inventory Stats Layout */
+.inventory-stats-card {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  padding: 10px 0;
+}
+
+@media (max-width: 768px) {
+  .inventory-stats-card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.inventory-stat-block {
+  padding: 0 16px;
+  border-right: 1px solid var(--border-color);
+}
+
+.inventory-stat-block:last-child {
+  border-right: none;
+}
+
+.inventory-stat-title {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.inventory-stat-title.primary { color: #1890ff; }
+.inventory-stat-title.warning { color: #fa8c16; }
+.inventory-stat-title.purple { color: #722ed1; }
+.inventory-stat-title.danger { color: #f5222d; }
+
+.inventory-stat-value-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 4px;
+}
+
+.inventory-stat-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.inventory-stat-subvalue {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.inventory-stat-footer {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+/* Products Card Layout */
+.products-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.products-card-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.products-header-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* Pagination container styles */
+.pagination-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-color);
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.pagination-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+/* Image drag & drop area inside modal */
+.image-upload-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed var(--border-color);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  background-color: var(--bg-app);
+  margin-bottom: 16px;
+  transition: border-color var(--transition-fast);
+}
+
+.image-upload-container:hover {
+  border-color: var(--primary-color);
+}
+
+.image-upload-icon {
+  font-size: 28px;
+  margin-bottom: 8px;
+  color: var(--text-muted);
+}
+
+.image-upload-text {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.image-upload-link {
+  color: var(--primary-color);
+  font-weight: 600;
+}
